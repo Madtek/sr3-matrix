@@ -1,7 +1,16 @@
-.App {
-  text-align: center;
+
+body {
+	background-color: black;
+	color: rgb(0, 255, 0);
+	text-align: left;
+	font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
 
+div {
+	/*border: solid white;*/
+	float: left;
+}
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +45,4 @@
     transform: rotate(360deg);
   }
 }
+*/
