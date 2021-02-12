@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
-import { HostManager } from './comp/host/Host';
-import { Core } from './common/core';
-import { Hint } from './comp/Hint';
+import { HostManager } from './components/host/Host';
+import { Hint } from './components/hint/Hint';
 
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
 	<div className="App">
 		
 		<div style={{width: "50%"}}>
-		
 			<HostManager />
 		</div>
 		
