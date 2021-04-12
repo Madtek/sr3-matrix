@@ -1,0 +1,722 @@
+{
+  "utils": [
+    {
+      "id": "browse",
+      "name": "Schmöker",
+      "multi": 1,
+      "type": "operation",
+      "desc": "Hilft beim Suchen. Spezialeffekte ausser MW senkung zB."
+    },
+    {
+      "id": "sleaze",
+      "name": "Schleicher",
+      "multi": 3,
+      "type": "special",
+      "desc": "Bestimmt Entdeckungsfaktor Maske+Schleicher / 2 aufgerundet"
+    }
+  ],
+  "operations": [
+    {
+      "id": "AbortHostShutdown",
+      "name": "Stall or stop host shutdown",
+      "type": "non",
+      "test": "Control",
+      "util": "Swerve",
+      "action": "Complex",
+      "desc": "Stall or stop host shutdown."
+    },
+    {
+      "id": "AlterIcon",
+      "name": "Alter Icon",
+      "type": "non",
+      "test": "Control",
+      "util": "Redecorate",
+      "action": "Complex",
+      "desc": "Change icon’s appearance."
+    },
+    {
+      "id": "AnalyzeHost",
+      "name": "Analyze Host",
+      "type": "non",
+      "test": "Control",
+      "util": "Analyze",
+      "action": "Complex",
+      "desc": "Determine host’s ratings, tricks."
+    },
+    {
+      "id": "AnalyzeIC",
+      "name": "Analyze IC",
+      "type": "non",
+      "test": "Control",
+      "util": "Analyze",
+      "action": "Free",
+      "desc": "Determine located IC’s type."
+    },
+    {
+      "id": "AnalyzeIcon",
+      "name": "Analyze Icon",
+      "type": "non",
+      "test": "Control",
+      "util": "Analyze",
+      "action": "Free",
+      "desc": "Identify icon type."
+    },
+    {
+      "id": "AnalyzeOperation",
+      "name": "Analyze Operation",
+      "type": "non",
+      "test": "Control",
+      "util": "Snooper",
+      "action": "Simple",
+      "desc": "Identify operation made and utility used by other user."
+    },
+    {
+      "id": "AnalyzeSecurity",
+      "name": "Analyze Security",
+      "type": "non",
+      "test": "Control",
+      "util": "Analyze",
+      "action": "Simple",
+      "desc": "Determine grid/host’s Security rating, security tally, alert status."
+    },
+    {
+      "id": "AnalyzeSubsystem",
+      "name": "Analyze Subsystem",
+      "type": "non",
+      "test": "Targeted Subsystem",
+      "util": "Analyze",
+      "action": "Simple",
+      "desc": "Identify hidden features."
+    },
+    {
+      "id": "BlockSystemOperation",
+      "name": "Block System Operation",
+      "type": "non",
+      "test": "Control",
+      "util": "Crash",
+      "action": "Complex",
+      "desc": "Interfere with another’s system operations."
+    },
+    {
+      "id": "ControlSlave",
+      "name": "Control Slave",
+      "type": "Monitored",
+      "test": "Slave",
+      "util": "Spoof",
+      "action": "Complex",
+      "desc": "Control remote devices."
+    },
+    {
+      "id": "CrashApplication",
+      "name": "Crash Application",
+      "type": "non",
+      "test": "Appropriate Subsystem",
+      "util": "Crash",
+      "action": "Complex",
+      "desc": "Shutdown application or tortoise user."
+    },
+    {
+      "id": "CrashHost",
+      "name": "Crash Host",
+      "type": "non",
+      "test": "Control",
+      "util": "Crash",
+      "action": "Complex",
+      "desc": "Shutdown host."
+    },
+    {
+      "id": "Decoy",
+      "name": "Decoy",
+      "type": "non",
+      "test": "Control",
+      "util": "Mirrors",
+      "action": "Complex",
+      "desc": "Create decoy icon."
+    },
+    {
+      "id": "DecryptAccess",
+      "name": "Decrypt Access",
+      "type": "non",
+      "test": "Access",
+      "util": "Decrypt",
+      "action": "Simple",
+      "desc": "Defeat scramble IC to access grid or host."
+    },
+    {
+      "id": "DecryptFile",
+      "name": "Decrypt File",
+      "type": "non",
+      "test": "Files",
+      "util": "Decrypt",
+      "action": "Simple",
+      "desc": "Defeat scramble IC on file."
+    },
+    {
+      "id": "DecryptSlave",
+      "name": "Decrypt Slave",
+      "type": "non",
+      "test": "Slave",
+      "util": "Decrypt",
+      "action": "Simple",
+      "desc": "Defeat scramble IC on Slave (Periphery) subsystem."
+    },
+    {
+      "id": "DisarmDataBomb",
+      "name": "Disarm Data Bomb",
+      "type": "non",
+      "test": "Files or Slave",
+      "util": "Defuse",
+      "action": "Complex",
+      "desc": "Deactivate located data bomb."
+    },
+    {
+      "id": "Disinfect",
+      "name": "Disinfect",
+      "type": "non",
+      "test": "Appropriate Subsystem",
+      "util": "Purge",
+      "action": "Complex",
+      "desc": "Destroy worm programs."
+    },
+    {
+      "id": "DownloadData",
+      "name": "Download Data",
+      "type": "Ongoing",
+      "test": "Files",
+      "util": "Read/Write",
+      "action": "Simple",
+      "desc": "Copy file to cyberterminal"
+    },
+    {
+      "id": "DumpLog",
+      "name": "Dump Log",
+      "type": "Interrogation ",
+      "test": "Control",
+      "util": "Validate",
+      "action": "Complex",
+      "desc": "Read host logs"
+    },
+    {
+      "id": "EditFile",
+      "name": "Edit File",
+      "type": "non",
+      "test": "Files",
+      "util": "Read/Write",
+      "action": "Simple",
+      "desc": "Change datafile"
+    },
+    {
+      "id": "EditSlave",
+      "name": "Edit Slave",
+      "type": "Monitored",
+      "test": "Slave",
+      "util": "Spoof",
+      "action": "Complex",
+      "desc": "Modify data sent to/from remote device (Periphery)"
+    },
+    {
+      "id": "Encrypt Access",
+      "name": "Encrypt Access",
+      "type": "non",
+      "test": "Access",
+      "util": "Encrypt",
+      "action": "Simple",
+      "desc": "Encrypt access to host or grid"
+    },
+    {
+      "id": "EncryptFile",
+      "name": "Encrypt File",
+      "type": "non",
+      "test": "Files",
+      "util": "Encrypt",
+      "action": "Simple",
+      "desc": "Encrypt file"
+    },
+    {
+      "id": "EncryptSlave",
+      "name": "Encrypt Slave",
+      "type": "non",
+      "test": "Slave",
+      "util": "Encrypt",
+      "action": "Simple",
+      "desc": "Encrypt Slave (Periphery) subsystem"
+    },
+    {
+      "id": "FreezeVanishingSAN",
+      "name": "Freeze Vanishing SAN",
+      "type": "non",
+      "test": "Access",
+      "util": "Doorstop",
+      "action": "Complex",
+      "desc": "Keep Vanishing SAN open"
+    },
+    {
+      "id": "GracefulLogoff",
+      "name": "Graceful Logoff",
+      "type": "Interrogation",
+      "test": "Access",
+      "util": "Deception",
+      "action": "Complex",
+      "desc": "Exit Matrix without dump shock, clear system memories"
+    },
+    {
+      "id": "Infect",
+      "name": "Infect",
+      "type": "non",
+      "test": "Appropriate Subsystem",
+      "util": "Worm",
+      "action": "Complex",
+      "desc": "Seed subsystem with worms"
+    },
+    {
+      "id": "InterceptData",
+      "name": "Intercept Data",
+      "type": "Ongoing",
+      "test": "Appropriate Subsystem",
+      "util": "Sniffer",
+      "action": "Complex",
+      "desc": "Search and intercept data traffic"
+    },
+    {
+      "id": "InvalidateAccount",
+      "name": "Invalidate Account",
+      "type": "non",
+      "test": "Control",
+      "util": "Validate",
+      "action": "Complex",
+      "desc": "Erase account/passcodes"
+    },
+    {
+      "id": "LocateAccessNode",
+      "name": "Locate Access Node",
+      "type": "Interrogation",
+      "test": "Index",
+      "util": "Browse",
+      "action": "Complex",
+      "desc": "Find LTG code for host or commcode"
+    },
+    {
+      "id": "LocateDecker",
+      "name": "Locate Decker",
+      "type": "non",
+      "test": "Index",
+      "util": "Scanner",
+      "action": "Complex",
+      "desc": "Find persona in grid/host"
+    },
+    {
+      "id": "LocateFile",
+      "name": "Locate File",
+      "type": "Interrogation",
+      "test": "Index",
+      "util": "Browse",
+      "action": "Complex",
+      "desc": "Find specific datafile"
+    },
+    {
+      "id": "LocateFrame",
+      "name": "Locate Frame",
+      "type": "non",
+      "test": "Index",
+      "util": "Scanner",
+      "action": "Complex",
+      "desc": "Locate frames/sprites/SKs"
+    },
+    {
+      "id": "LocatIC",
+      "name": "Locate IC",
+      "type": "non",
+      "test": "Index",
+      "util": "Analyze",
+      "action": "Complex",
+      "desc": "Find IC in system"
+    },
+    {
+      "id": "LocatPaydata",
+      "name": "Locate Paydata",
+      "type": "Interrogation",
+      "test": "Index",
+      "util": "Evaluate",
+      "action": "Complex",
+      "desc": "Find saleable data on host"
+    },
+    {
+      "id": "LocatSlave",
+      "name": "Locate Slave",
+      "type": "Interrogation",
+      "test": "Index",
+      "util": "Browse",
+      "action": "Complex",
+      "desc": "Find specific remote devices (Periphery)"
+    },
+    {
+      "id": "LocateTortoiseUsers",
+      "name": "Locate Tortoise Users",
+      "type": "non",
+      "test": "Index",
+      "util": "Scanner",
+      "action": "Simple",
+      "desc": "Lists tortoise users on system"
+    },
+    {
+      "id": "LogontoHost",
+      "name": "Logon to Host",
+      "type": "non",
+      "test": "Access",
+      "util": "Deception",
+      "action": "Complex",
+      "desc": "Access host"
+    },
+    {
+      "id": "LogontoLTG",
+      "name": "Logon to LTG",
+      "type": "non",
+      "test": "Access",
+      "util": "Deception",
+      "action": "Complex",
+      "desc": "Access LTG"
+    },
+    {
+      "id": "LogontoRTG",
+      "name": "Logon to RTG",
+      "type": "non",
+      "test": "Access",
+      "util": "Deception",
+      "action": "Complex",
+      "desc": "Access RTG"
+    },
+    {
+      "id": "MakeComcall",
+      "name": "Make Comcall",
+      "type": "Monitored",
+      "test": "Files",
+      "util": "Commlink",
+      "action": "Complex",
+      "desc": "Make call, set up conference call"
+    },
+    {
+      "id": "MonitorSlave",
+      "name": "Monitor Slave",
+      "type": "Monitored",
+      "test": "Slave",
+      "util": "Spoof",
+      "action": "Simple",
+      "desc": "Read data transmitted by remote device to host"
+    },
+    {
+      "id": "NullOperation",
+      "name": "Null Operation",
+      "type": "non",
+      "test": "Control",
+      "util": "Deception",
+      "action": "Complex",
+      "desc": "Loiter in system without notice"
+    },
+    {
+      "id": "RedirectDatatrail",
+      "name": "Redirect Datatrail",
+      "type": "non",
+      "test": "Control",
+      "util": "Camo",
+      "action": "Complex",
+      "desc": "Lay false trail in grid to confuse trace programs"
+    },
+    {
+      "id": "RelocateTrace",
+      "name": "Relocate Trace",
+      "type": "non",
+      "test": "Control",
+      "util": "Relocate",
+      "action": "Simple",
+      "desc": "Confuse trace IC"
+    },
+    {
+      "id": "RestrictIcon",
+      "name": "Restrict Icon",
+      "type": "Ongoing",
+      "test": "Control",
+      "util": "Validate",
+      "action": "Complex",
+      "desc": "Inhibit located icon’s operations"
+    },
+    {
+      "id": "ScanIcon",
+      "name": "Scan Icon",
+      "type": "non",
+      "test": "Special",
+      "util": "Scanner",
+      "action": "Simple",
+      "desc": "Gather info on icons"
+    },
+    {
+      "id": "SendData",
+      "name": "Send Data",
+      "type": "Ongoing",
+      "test": "Files",
+      "util": "Read/Write",
+      "action": "Simple",
+      "desc": "Transfer data to icon or host"
+    },
+    {
+      "id": "SwapMemory",
+      "name": "Swap Memory",
+      "type": "Ongoing",
+      "test": "None",
+      "util": "None",
+      "action": "Simple",
+      "desc": "Load new utility"
+    },
+    {
+      "id": "TapComcall",
+      "name": "Tap Comcall",
+      "type": "Monitored",
+      "test": "Special",
+      "util": "Commlink",
+      "action": "Complex",
+      "desc": "Trace/listen to commlink calls"
+    },
+    {
+      "id": "TraceMXPAddress",
+      "name": "Trace MXP Address",
+      "type": "Interrogation",
+      "test": "Index",
+      "util": "Browse",
+      "action": "Complex",
+      "desc": "Trace address to jackpoint"
+    },
+    {
+      "id": "Triangulate",
+      "name": "Triangulate",
+      "type": "Interrogation",
+      "test": "Slave",
+      "util": "Triangulation",
+      "action": "Complex",
+      "desc": "Determine physical location of wireless device"
+    },
+    {
+      "id": "UploadData",
+      "name": "Upload Data",
+      "type": "Ongoing",
+      "test": "Files",
+      "util": "Read/Write",
+      "action": "Simple",
+      "desc": "Transmit data from deck to Matrix"
+    },
+    {
+      "id": "ValidateAccount",
+      "name": "Validate Account",
+      "type": "non",
+      "test": "Control",
+      "util": "Validate",
+      "action": "Complex",
+      "desc": "Create account/passcode"
+    }
+  ],
+  "ic": [
+    {
+      "name": "Krüppler-",
+      "type": "active",
+      "suffix": [
+        {
+          "id": "bod",
+          "name": "Säure(Bod)"
+        },
+        {
+          "id": "evade",
+          "name": "Binder(Ausweich)"
+        },
+        {
+          "id": "sensor",
+          "name": "Störer(Sensor)"
+        },
+        {
+          "id": "mask",
+          "name": "Marker(Maske)"
+        }
+      ],
+      "category": "white",
+      "multi": 3,
+      "desc": "Attack: IC(IconMW) vs. Attribut(IcLvl) -> =< nix, > 2Erfolge=1 Atrib Punkt loss. Nie unter 1. Härte&Panzerung nutzlos."
+    },
+    {
+      "name": "Killer",
+      "type": "active",
+      "category": "white",
+      "multi": 2,
+      "desc": "Attack vs. Icon. IcLvl=Power Dmg=HostSecDmg(M/S). Standard Attack. Siehe rules."
+    },
+    {
+      "name": "Sonde",
+      "type": "passive",
+      "category": "white",
+      "multi": 3,
+      "desc": "Extra Entdeckungswurf pro systemprobe"
+    },
+    {
+      "name": "Wirbel-",
+      "type": "passive",
+      "suffix": [
+        {
+          "id": "entry",
+          "name": "entry"
+        },
+        {
+          "id": "control",
+          "name": "control"
+        },
+        {
+          "id": "index",
+          "name": "index"
+        },
+        {
+          "id": "file",
+          "name": "file"
+        },
+        {
+          "id": "periphery",
+          "name": "periphery"
+        }
+      ],
+      "category": "white",
+      "multi": 1,
+      "desc": "Verschlüsselt das subsystem. Blockiert Subsystem oder Objekt. Entweder entschlüsseln(kein entdeckungswurf, on fail: daten zerstör probe IcLvl(computer) ) oder killen"
+    },
+    {
+      "name": "Teerbaby-",
+      "type": "passive",
+      "suffix": [
+        {
+          "id": "operation",
+          "name": "operation"
+        },
+        {
+          "id": "offence",
+          "name": "offence"
+        },
+        {
+          "id": "defence",
+          "name": "defence"
+        },
+        {
+          "id": "special",
+          "name": "special"
+        }
+      ],
+      "category": "white",
+      "multi": 2,
+      "desc": "Pasive attack on Utilitytype use. IcLvl(UtilLvl) VS. UtilLvl(IcLvl) =< nix & Entedeckungs SensorProbe(IcLvl), > Util UND IC stürzt ab. erhöht SecKonto."
+    },
+    {
+      "name": "Blaster",
+      "type": "active",
+      "category": "GREY",
+      "multi": 3,
+      "desc": "Wie Killer + On IconDeath IcLvl(MPCP+Härte) 2 Erf. = MPCP-1. Muss repariert/ersetzt werden."
+    },
+    {
+      "name": "Ripper-",
+      "type": "active",
+      "suffix": [
+        {
+          "id": "bod",
+          "name": "Säure(Bod)"
+        },
+        {
+          "id": "evade",
+          "name": "Binder(Ausweich)"
+        },
+        {
+          "id": "sensor",
+          "name": "Störer(Sensor)"
+        },
+        {
+          "id": "mask",
+          "name": "Marker(Maske)"
+        }
+      ],
+      "category": "GREY",
+      "multi": 4,
+      "desc": "Wie Krüpler + On IconDeath IcLvl(MPCP+Härte) 2 Erf = Persona/Attrib-1. Muss repariert/ersetzt werden."
+    },
+    {
+      "name": "Funke",
+      "type": "active",
+      "category": "GREY",
+      "multi": 4,
+      "desc": "Wie Killer + On IconDeath IcLvl(MPCP+2+Härte) 2 Erf = MPCP-1 & (IcLvl-Härte)M Körper Dmg am Decker. "
+    },
+    {
+      "name": "Teergrube-",
+      "type": "passive",
+      "suffix": [
+        {
+          "id": "operation",
+          "name": "operation"
+        },
+        {
+          "id": "offence",
+          "name": "offence"
+        },
+        {
+          "id": "defence",
+          "name": "defence"
+        },
+        {
+          "id": "special",
+          "name": "special"
+        }
+      ],
+      "category": "GREY",
+      "multi": 3,
+      "desc": "Wie Teerbaby + On UtilCrash IcLvl(MPCP+Härte) Erf= Lösche ALLE Kopien im erreichbaren Speicher. "
+    },
+    {
+      "name": "BlackIC Letal",
+      "type": "active",
+      "category": "black",
+      "multi": 25,
+      "desc": "Standart Attack. Dmg= (IcLvl-Härte)M/S on Icon(Bod) & Körper(KON),  Ausloggen=Komplex & WillenskraftProbe(IcLvl)"
+    },
+    {
+      "name": "BlackIC NonLetal",
+      "type": "active",
+      "category": "black",
+      "multi": 10,
+      "desc": "Standart Attack. Dmg= (IcLvl-Härte)M/S on Icon(Bod) & Geistig(KON),  Ausloggen=Komplex & WillenskraftProbe(IcLvl)"
+    },
+    {
+      "name": "BlackIC Cerebropathic",
+      "type": "active",
+      "category": "black",
+      "multi": 16,
+      "desc": "As non-lethal black IC except: Black IC Rating x 2 Test against MPCP if character knocked out—successes inflict Stress Points"
+    },
+    {
+      "name": "BlackIC Psychotropic",
+      "type": "active",
+      "category": "black",
+      "multi": 20,
+      "desc": "As non-lethal black IC except: Willpower (Black IC Rating) Test to resist psychotropic effect / Cyberphobia Induces Matrix and simsense phobia / Frenzy Inspires maniacal rage / Judas Induces compulsion to betray / Positive conditioning Inspires love of company, inhibits character from acting / against corp’s interests"
+    },
+    {
+      "name": "Shutdown/Decker",
+      "category": "other",
+      "multi": 0,
+      "desc": "Host wird neu gestartet. Alle aktiven Verbindunge werden gekickt. Systemschock"
+    },
+    {
+      "name": "Decker/Shutdown",
+      "category": "other",
+      "multi": 0,
+      "desc": "Decker Sicherheits- oder Polizei- kommt ins system und checkt die Situation. Make a Decker..."
+    }
+  ],
+  "rtg": [
+    {
+      "id": "Amazonia",
+      "name": "Amazonia",
+      "color": "Green",
+      "security": 6
+    }
+  ]
+}
