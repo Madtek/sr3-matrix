@@ -46,3 +46,16 @@ div {
   }
 }
 */
+
+button {
+	background-color: darkgreen;
+	color: white;
+}
+button.active {
+	color: black;
+	background-color: lime;
+}
+
+input[type=number] {
+	width: 32pt;
+}

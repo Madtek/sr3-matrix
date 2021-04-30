@@ -1,0 +1,11 @@
+.alert-no {
+
+}
+
+.alert-passive {
+  color: orange;
+}
+
+.alert-active {
+  color: red;
+}

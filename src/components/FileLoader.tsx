@@ -1,8 +1,8 @@
-import React, { ChangeEvent, Component } from 'react';
+import React, {ChangeEvent, Component} from 'react';
 
-export class FileLoader<T> extends Component<{toSave: T, name:string, onLoad?:(file: T) => void}>{
+export class FileLoader<T> extends Component<{toSave?: T, name:string, onLoad?:(file: T) => void}>{
 
-	constructor(props: {toSave: T, name:string, onLoad?:(file: T) => void}) {
+	constructor(props: {toSave?: T, name:string, onLoad?:(file: T) => void}) {
 		super(props);
 	}
 
@@ -27,7 +27,10 @@ export class FileLoader<T> extends Component<{toSave: T, name:string, onLoad?:(f
 		
 		return (
 		<div className="json-expoter">
-			<button onClick={() => this.downloadFile(this.props.toSave, this.props.name)}>Save</button>
+			{
+				this.props.toSave &&
+				<button onClick={() => this.downloadFile(this.props.toSave, this.props.name)}>Save</button>
+			}
 			<input type="file" onChange={(e) => this.uploadFile(e)} title="Load"></input>
 		</div>
 	);

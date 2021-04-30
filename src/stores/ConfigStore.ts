@@ -1,15 +1,15 @@
 import RootStore from "./RootStore";
 import {makeAutoObservable} from "mobx";
-import {Config} from "../definitions/Config";
+import {MatrixConfig} from "../definitions/MatrixConfig";
 import JsonConfig from "./matrix_config.json";
 
 export default class ConfigStore {
     root: RootStore;
-    config: Config;
+    config: MatrixConfig;
 
     constructor(root: RootStore) {
-        makeAutoObservable(this, {root: false});
         this.root = root;
+        makeAutoObservable(this, {root: false});
         this.config = JsonConfig;
     }
 

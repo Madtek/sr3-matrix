@@ -24,7 +24,7 @@ export default class ChronicStore {
         this.spendRounds += duration;
 
 
-        if(duration == Duration.Free) {
+        if(duration === Duration.Free) {
             this.freeAvailable = false;
         }
     }
@@ -34,7 +34,7 @@ export default class ChronicStore {
     }
 
     get isComplexActionAvailable(): boolean {
-        return this.spendRounds % 1 == 0;
+        return this.spendRounds % 1 === 0;
     }
 }
 

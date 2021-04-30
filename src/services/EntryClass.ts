@@ -1,4 +1,4 @@
-import { Core } from "./Core";
+import { Dice } from "./Dice";
 
 // Nutzbarkeits Lvl, wie oft oder umständlich
 export enum EntryClasses { //usabilty
@@ -28,11 +28,11 @@ export interface EntryClass {
 
 export class EntryClassEasy implements EntryClass {
 	securityLevel():number {
-		return Core.rollDice(3) + 3; //1w3+3
+		return Dice.roll(3) + 3; //1w3+3
 	}
 
 	subsystemLevel():number {
-		return Core.rollDice(3) + 7;
+		return Dice.roll(3) + 7;
 	}
 
 	icLvlDiceMod = 0;
@@ -41,11 +41,11 @@ export class EntryClassEasy implements EntryClass {
 
 export class EntryClassAverage implements EntryClass {
 	securityLevel():number {
-		return Core.rollDice(3) + 6;
+		return Dice.roll(3) + 6;
 	}
 	
 	subsystemLevel():number {
-		return Core.rollDice(3, 2) + 9;
+		return Dice.roll(3, 2) + 9;
 	}
 
 	icLvlDiceMod = 2;
@@ -54,11 +54,11 @@ export class EntryClassAverage implements EntryClass {
 
 export class EntryClassHard implements EntryClass {
 	securityLevel():number  {
-		return Core.rollDice(3, 2) + 6; //2w3 + 6
+		return Dice.roll(3, 2) + 6; //2w3 + 6
 	}
 
 	subsystemLevel():number  {
-		 return Core.rollDice(6) + 12;
+		 return Dice.roll(6) + 12;
 	}
 
 	icLvlDiceMod = 4;

@@ -1,10 +1,5 @@
-import { Core } from "./Core";
-import { Dmg } from "../definitions/Enums";
-import { EntryClass } from "./EntryClass";
-import { IntrusionCountermeasure } from "../components/host/IntrusionCountermeasure";
-import { ics } from "../components/host/IntrusionCountermeasure";
-import { IntrusionCountermeasure } from "../components/host/IntrusionCountermeasure";
-
+import {Dice} from "./Dice";
+import {Dmg} from "../definitions/Enums";
 
 // Sicherheitsmassnahmen, Paranoia, sehr grosse öffentliche Aufmerksamkeit
 export enum SecurityColors {
@@ -46,11 +41,11 @@ export interface SecurityColor {
 
 export class SecurityColorBlue implements SecurityColor {
 	triggerThreshold = (): number => {
-		return Core.rollDice(3) + 4;
+		return Dice.roll(3) + 4;
 	}
 
 	icIni(icLvl: number): number {
-		return Core.rollDice(6) + icLvl;
+		return Dice.roll(6) + icLvl;
 	}
 
 	icDmg = Dmg.M;
@@ -65,11 +60,11 @@ export class SecurityColorBlue implements SecurityColor {
 
 export class SecurityColorGreen implements SecurityColor {
 	triggerThreshold(): number {
-		return Core.rollDice(3) + 3;
+		return Dice.roll(3) + 3;
 	}
 
 	icIni(icLvl: number): number {
-		return Core.rollDice(6, 2) + icLvl;
+		return Dice.roll(6, 2) + icLvl;
 	}
 
 	icDmg: Dmg = Dmg.M;
@@ -84,11 +79,11 @@ export class SecurityColorGreen implements SecurityColor {
 
 export class SecurityColorOrange implements SecurityColor {
 	triggerThreshold(): number {
-		return Core.rollDice(3) + 2;
+		return Dice.roll(3) + 2;
 	}
 
 	icIni(icLvl: number): number {
-		return Core.rollDice(6, 3) + icLvl;
+		return Dice.roll(6, 3) + icLvl;
 	}
 
 	icDmg = Dmg.S;
@@ -103,11 +98,11 @@ export class SecurityColorOrange implements SecurityColor {
 
 export class SecurityColorRed implements SecurityColor {
 	triggerThreshold(): number {
-		return Core.rollDice(3) + 1;
+		return Dice.roll(3) + 1;
 	}
 
 	icIni(icLvl: number): number {
-		return Core.rollDice(6, 4) + icLvl;
+		return Dice.roll(6, 4) + icLvl;
 	}
 
 	icDmg = Dmg.S;
@@ -122,11 +117,11 @@ export class SecurityColorRed implements SecurityColor {
 
 export class SecurityColorBlack implements SecurityColor {
 	triggerThreshold(): number {
-		return Core.rollDice(3);
+		return Dice.roll(3);
 	}
 
 	icIni(icLvl: number): number {
-		return Core.rollDice(6, 4) + icLvl;
+		return Dice.roll(6, 4) + icLvl;
 	}
 
 	icDmg = Dmg.D;

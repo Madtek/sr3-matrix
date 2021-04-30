@@ -515,8 +515,9 @@
   "ic": [
     {
       "name": "Krüppler-",
-      "type": "active",
-      "suffix": [
+      "id": "Crippler",
+      "type": "Proactive",
+      "suffixList": [
         {
           "id": "bod",
           "name": "Säure(Bod)"
@@ -526,36 +527,63 @@
           "name": "Binder(Ausweich)"
         },
         {
-          "id": "sensor",
-          "name": "Störer(Sensor)"
-        },
-        {
           "id": "mask",
           "name": "Marker(Maske)"
+        },
+        {
+          "id": "sensor",
+          "name": "Störer(Sensor)"
         }
       ],
-      "category": "white",
-      "multi": 3,
+      "category": "WHITE",
+      "multi": 6,
       "desc": "Attack: IC(IconMW) vs. Attribut(IcLvl) -> =< nix, > 2Erfolge=1 Atrib Punkt loss. Nie unter 1. Härte&Panzerung nutzlos."
     },
     {
+      "name": "Data Bomb",
+      "id": "Data Bomb",
+      "type": "Reactive",
+      "category": "WHITE",
+      "multi": 5,
+      "desc": "(Rating)D damage; IC crashes"
+    },
+    {
       "name": "Killer",
-      "type": "active",
-      "category": "white",
-      "multi": 2,
+      "id": "Killer",
+      "type": "Proactive",
+      "category": "WHITE",
+      "multi": 8,
       "desc": "Attack vs. Icon. IcLvl=Power Dmg=HostSecDmg(M/S). Standard Attack. Siehe rules."
     },
     {
+      "name": "Pavlov",
+      "id": "Pavlov",
+      "type": "Reactive",
+      "category": "WHITE",
+      "multi": 4,
+      "desc": " (Rating)M damage; IC stays"
+    },
+    {
       "name": "Sonde",
-      "type": "passive",
-      "category": "white",
+      "id": "Probe",
+      "type": "Reactive",
+      "category": "WHITE",
       "multi": 3,
       "desc": "Extra Entdeckungswurf pro systemprobe"
     },
     {
+      "name": "Scout",
+      "id": "Scout",
+      "type": "Reactive/Active",
+      "category": "WHITE",
+      "multi": 5,
+      "desc": "activ:Roll Attack->suc = extra dice for next IC attack, passiv:Like Probe IC"
+    },
+    {
       "name": "Wirbel-",
-      "type": "passive",
-      "suffix": [
+      "id": "Scramble",
+      "type": "Reactive",
+      "suffixList": [
         {
           "id": "entry",
           "name": "entry"
@@ -577,14 +605,15 @@
           "name": "periphery"
         }
       ],
-      "category": "white",
-      "multi": 1,
+      "category": "WHITE",
+      "multi": 3,
       "desc": "Verschlüsselt das subsystem. Blockiert Subsystem oder Objekt. Entweder entschlüsseln(kein entdeckungswurf, on fail: daten zerstör probe IcLvl(computer) ) oder killen"
     },
     {
       "name": "Teerbaby-",
-      "type": "passive",
-      "suffix": [
+      "id": "Tar baby",
+      "type": "Reactive",
+      "suffixList": [
         {
           "id": "operation",
           "name": "operation"
@@ -602,21 +631,23 @@
           "name": "special"
         }
       ],
-      "category": "white",
-      "multi": 2,
+      "category": "WHITE",
+      "multi": 5,
       "desc": "Pasive attack on Utilitytype use. IcLvl(UtilLvl) VS. UtilLvl(IcLvl) =< nix & Entedeckungs SensorProbe(IcLvl), > Util UND IC stürzt ab. erhöht SecKonto."
     },
     {
       "name": "Blaster",
-      "type": "active",
+      "id": "Blaster",
+      "type": "Proactive",
       "category": "GREY",
-      "multi": 3,
+      "multi": 10,
       "desc": "Wie Killer + On IconDeath IcLvl(MPCP+Härte) 2 Erf. = MPCP-1. Muss repariert/ersetzt werden."
     },
     {
       "name": "Ripper-",
-      "type": "active",
-      "suffix": [
+      "id": "Ripper",
+      "type": "Proactive",
+      "suffixList": [
         {
           "id": "bod",
           "name": "Säure(Bod)"
@@ -635,20 +666,22 @@
         }
       ],
       "category": "GREY",
-      "multi": 4,
+      "multi": 8,
       "desc": "Wie Krüpler + On IconDeath IcLvl(MPCP+Härte) 2 Erf = Persona/Attrib-1. Muss repariert/ersetzt werden."
     },
     {
       "name": "Funke",
-      "type": "active",
+      "id": "Sparky",
+      "type": "Proactive",
       "category": "GREY",
-      "multi": 4,
+      "multi": 12,
       "desc": "Wie Killer + On IconDeath IcLvl(MPCP+2+Härte) 2 Erf = MPCP-1 & (IcLvl-Härte)M Körper Dmg am Decker. "
     },
     {
       "name": "Teergrube-",
-      "type": "passive",
-      "suffix": [
+      "id": "Tar pit",
+      "type": "Reactive",
+      "suffixList": [
         {
           "id": "operation",
           "name": "operation"
@@ -667,48 +700,55 @@
         }
       ],
       "category": "GREY",
-      "multi": 3,
+      "multi": 7,
       "desc": "Wie Teerbaby + On UtilCrash IcLvl(MPCP+Härte) Erf= Lösche ALLE Kopien im erreichbaren Speicher. "
     },
     {
+      "name": "Trace",
+      "id": "Trace",
+      "type": "Proactive",
+      "category": "GREY",
+      "multi": 10,
+      "desc": "IC Rating (Evasion) Test to hunt, base 10 turns to locate."
+    },
+    {
       "name": "BlackIC Letal",
-      "type": "active",
+      "id": "Lethal",
+      "type": "Proactive",
       "category": "black",
       "multi": 25,
       "desc": "Standart Attack. Dmg= (IcLvl-Härte)M/S on Icon(Bod) & Körper(KON),  Ausloggen=Komplex & WillenskraftProbe(IcLvl)"
     },
     {
       "name": "BlackIC NonLetal",
-      "type": "active",
+      "id": "Non-Lethal",
+      "type": "Proactive",
       "category": "black",
       "multi": 10,
       "desc": "Standart Attack. Dmg= (IcLvl-Härte)M/S on Icon(Bod) & Geistig(KON),  Ausloggen=Komplex & WillenskraftProbe(IcLvl)"
     },
     {
       "name": "BlackIC Cerebropathic",
-      "type": "active",
+      "id": "Cerebropathic",
+      "type": "Proactive",
       "category": "black",
       "multi": 16,
       "desc": "As non-lethal black IC except: Black IC Rating x 2 Test against MPCP if character knocked out—successes inflict Stress Points"
     },
     {
       "name": "BlackIC Psychotropic",
-      "type": "active",
+      "id": "Psychotropic",
+      "type": "Proactive",
       "category": "black",
       "multi": 20,
       "desc": "As non-lethal black IC except: Willpower (Black IC Rating) Test to resist psychotropic effect / Cyberphobia Induces Matrix and simsense phobia / Frenzy Inspires maniacal rage / Judas Induces compulsion to betray / Positive conditioning Inspires love of company, inhibits character from acting / against corp’s interests"
     },
     {
-      "name": "Shutdown/Decker",
+      "name": "Shutdown",
+      "id": "Shutdown",
       "category": "other",
       "multi": 0,
       "desc": "Host wird neu gestartet. Alle aktiven Verbindunge werden gekickt. Systemschock"
-    },
-    {
-      "name": "Decker/Shutdown",
-      "category": "other",
-      "multi": 0,
-      "desc": "Decker Sicherheits- oder Polizei- kommt ins system und checkt die Situation. Make a Decker..."
     }
   ],
   "rtg": [

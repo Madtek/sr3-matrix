@@ -1,25 +1,19 @@
 import React from 'react';
 import './App.css';
-import { HostManager } from './components/host/Host';
-import { Hint } from './components/hint/Hint';
+import {Hint} from './components/hint/Hint';
+import RootStore from "./stores/RootStore";
+import HostManager from "./components/host/HostManager";
+import {ViewState} from "./components/ViewState";
 
 
 function App() {
-	let tmpNr: number = 0;
+	const root: RootStore = new RootStore();
 
 	return (
 	<div className="App">
-		
-		<div style={{width: "50%"}}>
-			<HostManager />
-		</div>
-		
-		<div style={{width: "50%"}}>
-			<Hint />
-		</div>
-	
-		<div>
-		</div>
+		<ViewState root={root} /><br/>
+		<HostManager root={root} />
+		{/*<Hint />*/}
 	</div>
   );
 }

@@ -1,11 +1,16 @@
 
-export class Core {
+export class Dice {
 
-	public static rollDice(dice:number, count:number = 1):number {
+	/**
+	 * @return Sum of roll
+	 * @param dice dice value
+	 * @param count how many dice
+	 */
+	public static roll(dice:number, count:number = 1):number {
 		let res = 0;
 
 		for(let i = 1; i <= count; i++) {
-		    res += Math.ceil(Math.random() * dice);
+		    res = res + Math.ceil(Math.random() * dice);
 		}
 
 		// console.log("Roll:" + count + "W" + dice + "=" + res);
@@ -14,7 +19,7 @@ export class Core {
 
 	/**
 	 *
-	 * @return Success count
+	 * @return Success count (compund / exploding dice)
 	 * @param count How many dice
 	 * @param tn Whats the targetNumber (compund / exploding dice)
 	 */
@@ -25,9 +30,9 @@ export class Core {
 			let res: number = 6;
 			let resSum: number = 0;
 
-			while(res == 6) {
+			while(res === 6) {
 				res = Math.ceil(Math.random() * 6);
-				resSum =+ res;
+				resSum = resSum + res;
 			}
 
 			if(resSum >= tn) {
@@ -37,5 +42,20 @@ export class Core {
 
 		// console.log("Roll:" + count + "W" + dice + "=" + res);
 		return successCount;
+	}
+
+	/**
+	 * @return one D6 result compunded
+	 */
+	public static d6Result():number {
+		let res: number;
+		let resSum: number = 0;
+
+		do {
+			res = Math.ceil(Math.random() * 6);
+			resSum = resSum + res;
+		} while(res === 6);
+
+		return resSum;
 	}
 }

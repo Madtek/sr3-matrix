@@ -1,6 +1,7 @@
 import {EntryClasses} from "../services/EntryClass";
 import {SecurityColors} from "../services/SecurityColor";
 import {IntrusionCountermeasure} from "./IntrusionCountermeasure";
+import Node from "./Node";
 
 export default interface Host {
     id?: string;
@@ -16,7 +17,8 @@ export default interface Host {
     file?: number;
     slave?: number;
 
-    triggerList?:Array<IntrusionCountermeasure>;
+    triggerList?: Array<IntrusionCountermeasure>;
+    nodeList?: Array<Node>
 
     costs?:number;
 }
@@ -27,4 +29,10 @@ export enum HostAttributes {
     index = "Index",
     file = "File",
     slave = "Slave"
+}
+
+export enum AlertStates {
+    no = "no",
+    passive = "passive",
+    active = "active"
 }
